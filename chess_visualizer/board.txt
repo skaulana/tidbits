@@ -1,0 +1,8 @@
+RNBQKBNR
+--P--P-P
+P--P--P-
+-P--P---
+-b--p-p-
+--n--p-p
+pppp---k
+r--q-bnr
