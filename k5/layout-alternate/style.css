@@ -1,0 +1,258 @@
+
+/*
+ *   STYLE.CSS -- Alternate layout
+ */
+
+*
+{
+	margin: 0px; padding: 0px; font-size: 100%;
+}
+
+/*
+ *   Layout positioning
+ */
+
+body
+{
+	border: 0px; text-align: left;
+	background: #000 url("headback.jpg") top center scroll repeat-x;
+}
+
+div.reference
+{
+	position: relative; top: 0px; left: 50%; width: 0px;
+}
+
+div.reference div.main
+{
+	position: absolute; top: 113px; left: -350px; width: 425px;
+}
+
+div.reference div.sidebar
+{
+	position: absolute; top: 113px; left: 106px; width: 240px;
+}
+
+div.reference div.navi
+{
+	position: absolute; top: 46px; right: -350px; width: 397px; text-align: right;
+}
+
+div.reference div.openid
+{
+	position: absolute; top: 80px; right: -350px; width: 700px; text-align: right;
+}
+
+/*
+ *   Standard Typography
+ */
+
+h1
+{
+	font: 24px/36px "Times New Roman", "Times", sans-serif; color: #333; font-weight: bold;
+}
+
+h2
+{
+	font: 18px/27px "Times New Roman", "Times", sans-serif; color: #333; font-weight: bold;
+}
+
+p, li, form, area, textarea, input, select
+{
+	font: 12px/20px "Tahoma", "Geneva", sans-serif; color: #999;
+}
+
+p.fine
+{
+	font: 9px/16px "Tahoma", "Geneva", sans-serif; color: #666;
+}
+
+li
+{
+	list-style-image: url("bullet.jpg"); list-style-type: square;
+	margin-left: 18px;
+}
+
+textarea, input, select
+{
+	background-color: #000; border: 1px solid #333; color: #CCC;
+}
+
+input.openid
+{
+	background: url("openid.jpg") center left no-repeat;
+	padding-left: 20px;
+}
+
+input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active
+{
+	color: #CCF; background-color: #003;
+}
+
+textarea[disabled], input[disabled]
+{
+	color: #666;
+}
+
+acronym
+{
+	border-bottom: 1px #666 dotted;
+}
+
+blockquote
+{
+	border-left: 1px #666 dotted; padding-left: 10px;
+}
+
+/*
+ *   Applied Typography
+ */
+
+.atten
+{
+	font-style: italic;
+}
+
+.paren
+{
+	color: #669;
+}
+
+.strike
+{
+	color: #669; text-decoration: line-through;
+}
+
+.sup
+{
+	font-size: 9px; vertical-align: super;
+}
+.sub
+{
+	font-size: 9px; vertical-align: sub;
+}
+
+.highlight, .hoverlight:hover
+{
+	background-color: #003;
+}
+
+.tag1
+{
+	font-size: 40px; line-height: 40px;
+}
+
+.tag2
+{
+	font-size: 27px; line-height: 36px;
+}
+
+.tag3
+{
+	font-size: 20px; line-height: 30px;
+}
+
+.tag4
+{
+	font-size: 14px; line-height: 21px;
+}
+
+.tag5
+{
+	font-size: 12px; line-height: 20px;
+}
+
+.tag6
+{
+	font-size: 9px; line-height: 16px;
+}
+
+.tag1, .tag2, .tag3, .tag4
+{
+	font-family: "Times New Roman", "Times", sans-serif; font-weight: bold;
+}
+
+.tag5, .tag6
+{
+	font-family: "Tahoma", "Geneva", sans-serif;
+}
+
+/*
+ *   Link Typography
+ */
+
+a
+{
+	border-bottom: 1px #333 dotted;
+	text-decoration: none; color: #36F;
+}
+
+a:hover, a:active
+{
+	border-bottom: 1px #FFF dotted;
+	background-color: #003;
+}
+
+a:active
+{
+	color: #CCF;
+}
+
+a.navi
+{
+	border-bottom: 0px;
+	font: 14px/14px "Verdana", "Geneva", sans-serif; font-weight: bold;
+	text-decoration: none; color: #66C;
+}
+
+a.navi:hover, a.navi:active
+{
+	border-bottom: 1px #FFF solid;
+	background-color: transparent; color: #69C;
+}
+
+a.navi:active
+{
+	color: #CCF;
+}
+
+a.special
+{
+	color: #996;
+}
+
+a.current
+{
+	border-top: 1px #FFF solid; color: #9CF;
+}
+
+a.imagelink
+{
+	background-color: transparent;
+	border-bottom: 0px;
+}
+
+/*
+ *   Images
+ */
+
+img
+{
+   border-width: 0px; border-style: none;
+   background-color: transparent;
+}
+
+img.bordered
+{
+   border: 1px dotted #666;
+}
+
+img.photo
+{
+   border: 1px solid #666; padding: 5px;
+}
+
+img.centered
+{
+   display: block; margin-left: auto; margin-right: auto;
+}

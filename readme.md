@@ -9,7 +9,12 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   of locations with their latitudes and longitudes, write some PHP code that will
   calculate and display the distance from the arbitrary location to every location
   within the table."
+* `k5/` - blogging scripts used to power [kaulana.com][1] in its 5th version. Useful
+  as a complete PHP app, or just the platform layer to power a blog's backend.
 
 ## License
 
-BSD as per the included `license.md`.
+BSD for my code as per the included `license.md`. Dependencies have their own as
+noted.
+
+[1]: http://www.kaulana.com/

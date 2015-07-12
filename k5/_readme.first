@@ -1,0 +1,63 @@
+Quick start instructions (you need a host with PHP and MySQL):
+
+0.  Get an OpenID if you don't have one.
+1.  Unzip everything locally.
+2.  Change the OpenID listed in k5install.php to your OpenID.
+3.  Fill in necessary MySQL information in k5.php.
+4.  Upload everything to your web server and browse to k5install.php.
+
+####################################################
+##### Okay, You Downloaded It
+####################################################
+
+Now you're wondering. What is k5?
+
+I wanted the freedom to structure my weblog in a way that made sense to me.
+So I made my own. k5. I thought I'd share it with you.
+
+####################################################
+##### Orienting Yourself
+####################################################
+
+If you want JUST the API, then take a look at the k5*.php files I'm listing below.
+Jump right in. There's plenty of comments to guide you on your way.
+
+Everything starts on k5util.php. Basic input sanitization, a nonce generator, and
+date manipulations to and from the MySQL format.
+
+Next, move on to k5base.php. Ignoring the constants at the top, you end up next with
+a very simple layout generator. Just fill in the HTML wherever you need it.
+
+Scroll down and you'll see a database accessor class. As little or as much help as you
+need from it. If you're comfortable writing your own MySQL queries, great, just pass them
+to query(). Want your queries written for you? Then you can move up to the get_*() and
+set_*() guys, who'll both produce and consume arrays that are easy for you as an
+application developer to work with.
+
+k5auth.php works together with k5login.php to provide simple authentication using
+OpenID. It all works in dumb mode, granted, but you barely have to do a thing to get
+a simple OpenID login system going. It'll write the login forms for you.
+
+And search. If you just need some fast and simple keyword searching, then you'll find it
+in k5search.php.
+
+####################################################
+##### Putting It All Together
+####################################################
+
+Look at k5.php next. This makes use of all the above APIs and automatically generates pages
+for the blog. Ability to blacklist your foes comes standard. There's also a (rudimentary)
+installation script to help you set up the necessary tables and such.
+
+Also look into k5test.php. It's mostly page text. Very little code to make an intelligent page.
+
+Use the application scripts to replicate kaulana.com's look. That's the rest of the stuff
+in the archive, a predefined solution. It might not work for you, but it did for me.
+
+Good luck with k5. -- s@k.com
+
+####################################################
+##### Acknowledgements
+####################################################
+
+k5 makes use of OpenID and XML-RPC libraries from OSC, SA and Keith Devins, respectively.

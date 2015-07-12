@@ -1,0 +1,75 @@
+
+##### .htaccess
+
+##### Apache configuration script.
+##### Include this file to enable the behaviors below on your Apache server.
+
+##### Deny access to all .ht files.
+
+<Files ~ "^\.ht">
+Order Deny,Allow
+Deny from All
+</Files>
+
+##### Specify custom error papges.
+
+ErrorDocument 400 error/400/
+ErrorDocument 401 error/401/
+ErrorDocument 403 error/403/
+ErrorDocument 404 error/404/
+ErrorDocument 500 error/500/
+
+##### Enable URL rewriting.
+
+RewriteEngine On
+
+##### Serve the error pages defined above.
+
+RewriteRule ^error/(400|401|403|404|500)/?$ error.php?type=$1
+
+##### Keep users from browsing these directories.
+
+RewriteRule ^js/?$ index.php [R]
+RewriteRule ^images/?$ index.php [R]
+RewriteRule ^layout/?$ index.php [R]
+RewriteRule ^openid/?$ index.php [R]
+
+##### Rewrite abstract URLs to scripts, while hiding it from the user.
+
+RewriteRule ^login/$ k5login.php [QSA]
+RewriteRule ^about/$ about.php
+RewriteRule ^admin/$ admin.php
+
+RewriteRule ^comments/$ comments.php
+RewriteRule ^comments/([0-9]+)/?(.*)$ comments.php?page=$1 [QSA]
+
+RewriteRule ^tags/$ tags.php
+RewriteRule ^tags/([^/]*)/?$ tags.php?tag=$1 [QSA]
+
+RewriteRule ^writings/$ writings.php
+RewriteRule ^writings/([0-9][0-9][0-9][0-9])/([0-9][0-9])/([0-9][0-9])/([^/]*)/?$ writings.php?yyyy=$1&mm=$2&dd=$3&title=$4 [QSA]
+RewriteRule ^writings/([0-9][0-9][0-9][0-9])/?$ writings.php?archives=$1 [QSA]
+
+RewriteRule ^rss/writings/$ rss.php?writings
+RewriteRule ^rss/comments/$ rss.php?comments
+RewriteRule ^rss/tags/([^/]*)/$ rss.php?tag=$1
+
+##### Enforce the trailing slash rule.
+
+RewriteRule ^login$ login/ [R=301,QSA]
+RewriteRule ^about$ about/ [R=301,QSA]
+RewriteRule ^admin$ admin/ [R=301,QSA]
+RewriteRule ^comments$ comments/ [R=301,QSA]
+RewriteRule ^writings$ writings/ [R=301,QSA]
+
+RewriteRule ^rss/writings$ rss/writings/ [R=301]
+RewriteRule ^rss/comments$ rss/comments/ [R=301]
+RewriteRule ^rss/tags/([^/]*)$ rss/tags/$1/ [R=301]
+
+##### Force redirects for anyone who tries to "browse into" virtual directories.
+
+RewriteRule ^login/(.+)$ login/ [R,QSA]
+RewriteRule ^comments/(.+)$ comments/ [R]
+RewriteRule ^writings/(.+)$ writings/ [R]
+
+##### End .htaccess
