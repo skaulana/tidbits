@@ -1,0 +1,17 @@
+###  Usage examples
+
+raytrace -f input-01 -aa on -o image-01.ppm
+raytrace -f input-02 -aa on -o image-02.ppm
+raytrace -f input-03 -o image-03.ppm
+
+###  Additional info
+
+Originally written for a ray tracer assignment in the Berkeley
+class CS 184. Use gmake to build. Images are output in PPM format
+which you can then convert to PNG to match the repo.
+
+Features: rendering of spheres and polygons, simple Phong shading,
+point and directional lights, shadows, reflections, anti-aliasing.
+
+You can also specify --debug when running the program to get status
+updates every time an additional 10% of the main loop finishes.
