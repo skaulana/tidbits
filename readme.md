@@ -13,9 +13,12 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   as a complete PHP app, or as the platform layer powering a blog's backend.
 * `mfuof/` - e.g. Move Files Up One Folder. Applet intended to be placed in the
   Windows 'Send To' folder as an accelerator.
+* `algo4.cs` - solution to the strongly connected components (SCC) problem from
+   the Coursera MOOC [Algorithms I][2].
 
 ## License
 
 BSD for my code, as per the `license.md`. Dependencies have their own as noted.
 
 [1]: http://www.kaulana.com/
+[2]: https://class.coursera.org/algo/class/index
