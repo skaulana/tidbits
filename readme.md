@@ -15,6 +15,7 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   Windows 'Send To' folder as an accelerator.
 * `algo4.cs` - solution to the strongly connected components (SCC) problem from
    the Coursera MOOC [Algorithms I][2].
+* `hexparse.php` - generates Verilog code to initialize a BlockRAM with hex data.
 
 ## License
 
