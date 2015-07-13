@@ -12,14 +12,18 @@ Just a smattering of miscellanea that don't really warrant their own repos.
 * `k5/` - blogging scripts used to power [kaulana.com][1] in its 5th version. Useful
   as a complete PHP app, or as the platform layer powering a blog's backend.
 * `mfuof/` - e.g. Move Files Up One Folder. Applet intended to be placed in the
-  Windows 'Send To' folder as an accelerator.
+  Windows '[Send To][2]' folder as an accelerator.
 * `algo4.cs` - solution to the strongly connected components (SCC) problem from
-   the Coursera MOOC [Algorithms I][2].
+  the [Coursera](http://coursera.org) MOOC [Algorithms I][3].
 * `hexparse.php` - generates Verilog code to initialize a BlockRAM with hex data.
+* `tfs_feature_cards.html` - creates printable cards for [TFS][4] features using
+  a CSV export of a features query.
 
 ## License
 
 BSD for my code, as per the `license.md`. Dependencies have their own as noted.
 
-[1]: http://www.kaulana.com/
-[2]: https://class.coursera.org/algo/class/index
+[1]: http://kaulana.com/
+[2]: https://support.microsoft.com/en-us/kb/310270
+[3]: https://class.coursera.org/algo/class/index
+[4]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx

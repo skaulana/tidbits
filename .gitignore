@@ -17,6 +17,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Visual Studio ignorables
+*.suo
+*.user
+[Bb]in
+[Oo]bj
+
 # =========================
 # Operating System Files
 # =========================

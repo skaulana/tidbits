@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<title>Feature Card Printer Doohickey</title>
+<style>
+	* { margin: 0; padding: 0; border: 0; font-size: 16pt; font-family: Segoe UI, sans-serif }
+	table { margin-left: auto; margin-right: auto; margin-bottom: 0.1in; width: 10in; height: 7.5in; page-break-after: always; border: 3px solid #987 }
+	td { vertical-align: top; padding: 0.1in }
+	#drop-target { padding: 0.5in; font-size: 30pt; margin: 0.1in; border: 3px dashed #ccc }
+	#help-target { padding: 0.5in; font-style: italic; font-size: 12pt }
+	.bottomDash { border-bottom: 1px dashed #cde }
+	.stackBox { position: absolute; border: 1px solid #cde; padding: 0.3in; width: 0.8in; height: 0.6in; text-align: center; font-size: 30pt; font-family: Segoe UI Light, sans-serif }
+	.featureTitle { position: relative; left: 1.6in; width: 8in; font-size: 60pt; font-family: Segoe UI Light, sans-serif }
+	.featureKeywords { font-weight: 900; width: 1in }
+	.featureTFS { font-style: italic; color: #999; margin-top: 0.2in }
+</style>
+</head>
+
+<body>
+        <div id="drop-target">Drop a CSV file here -&gt;</div>	
+	<div id="help-target">
+		What's the workflow?<br />
+		1. From your TFS backlog query in VS &gt; Open in Microsoft Office &gt; Open Query in Microsoft Excel<br />
+		2. Save the Excel file as-is to your desktop in .csv format (say yes to all the prompts)<br />
+		3. Drop it up above, then Ctrl+P and switch to landscape for best results<br /><br />
+		Expected schema: ID, Stack Rank, Title, Keywords, Iteration Path, Description<br />
+	</div>
+
+	<div id="output-target"></div>
+
+	<script>
+		(function () {
+			var ht = document.getElementById("help-target");
+			var dt = document.getElementById("drop-target");
+			dt.addEventListener("dragenter", function (e) { e.preventDefault(); }, false);
+			dt.addEventListener("dragover", function (e) { e.preventDefault(); }, false);
+			dt.addEventListener("drop", function (e) {
+
+				ht.parentNode.removeChild(ht); // close the help message
+				var files = e.dataTransfer.files; // get files dropped into browser
+				if (files.length > 0) {
+					var theFile = files[0]; // get the first file dropped
+					var reader = new FileReader();
+ 					reader.onload = function(e) { parseCSV(e.target.result, '\r\n', ',', '"'); };
+					reader.readAsText(theFile); // read the file
+					dt.parentNode.removeChild(dt); // close the drop target
+				}
+				e.preventDefault();
+
+			}, false);
+		})();
+
+		function parseCSV(text, lineBreak, cellBreak, cellEscape) {
+			var cells = [];
+			var i = 0;
+
+			// ignore first 2 lines which are the auto-headers from TFS
+			text = text.substring(text.indexOf(lineBreak) + lineBreak.length);
+			text = text.substring(text.indexOf(lineBreak) + lineBreak.length);
+
+			while (text.length) {
+				if (text.indexOf(cellEscape) == 0) { // quoted cell
+					var eolTest = text.indexOf(cellEscape + lineBreak);
+					if (eolTest == -1 || text.indexOf(cellEscape + cellBreak) < eolTest) { // next cell
+						cells[i] = text.split(cellEscape + cellBreak, 1).toString();
+						cells[i] = cells[i].substring(cellEscape.length);
+						text = text.substring(cells[i].length + cellBreak.length + cellEscape.length * 2);
+						cells[i] = cells[i].replace(/""/g, "&quot;");
+						i++;
+					}
+					else { // next line
+						cells[i] = text.split(cellEscape + lineBreak, 1).toString();
+						cells[i] = cells[i].substring(cellEscape.length);
+						text = text.substring(cells[i].length + lineBreak.length + cellEscape.length * 2);
+						cells[i] = cells[i].replace(/""/g, "&quot;");
+						outputCard(cells);
+						cells = [];
+						i = 0;
+					}
+				}
+				else if (text.indexOf(cellBreak) < text.indexOf(lineBreak)) { // next cell
+					cells[i] = text.split(cellBreak, 1).toString();
+					text = text.substring(cells[i].length + cellBreak.length);
+					i++;
+				}
+				else { // next line
+					cells[i] = text.split(lineBreak, 1).toString();
+					text = text.substring(cells[i].length + lineBreak.length);
+					outputCard(cells);
+					cells = [];
+					i = 0;
+				}
+			}
+
+			outputCard(cells); // flush
+		}
+
+		function outputCard(cells) {
+			var id = cells[0].trim();
+			var stackRank = cells[1].trim();
+			var title = cells[2].trim();
+			var keywords = cells[3].trim();
+			var iterationPath = cells[4].trim();
+			var description = cells[5].replace(/\r\n/g,"<br />").trim();
+
+			var ot = document.getElementById("output-target");
+			var card = ot.appendChild(document.createElement("table"));
+			card.innerHTML = "<tr><td colspan='2' class='bottomDash'>"
+				+ "<div class='stackBox'>" + stackRank + "</div>"
+				+ "<div class='featureTitle'>" + title + "</div>"
+				+ "</td></tr><tr><td>"
+				+ "<div>" + description + "</div>"
+				+ "<div class='featureTFS'>TFS #" + id + " &nbsp; -&gt; &nbsp; Project" + iterationPath + "</div>"
+				+ "</td>"
+				+ "<td class='featureKeywords'>" + keywords + "</td></tr>";
+		}
+	</script>
+</body>
+</html>
