@@ -1,0 +1,63 @@
+<head>
+    <title>CMS Prototype</title>
+</head>
+<body>
+</body>
+
+<template name="shell">
+    <div class="container-fluid">
+        {{> loginButtons}}
+        <h1 class="text-center">{{totalItems}} repository item{{#if pluralize totalItems}}s{{/if}}</h1>
+        {{> yield "extra"}}
+        {{> yield "base"}}
+    </div>
+</template>
+
+<template name="upload">
+    <div id="dropzone" class="dropzone">
+        <div style="border: 1px dashed gray; text-align: center; color: gray;">Drop file to upload</div>
+    </div>
+    {{#each files}}
+        {{#unless this.isUploaded}}
+        {{this.name}} {{> FS.UploadProgressBar}}
+        {{/unless}}
+    {{/each}}
+    <p><a href="/" class="btn btn-default">Done</a></p>
+</template>
+
+<template name="hello">
+  <form class="commandbar">
+    {{#if currentUser}}
+        Thanks for logging in {{currentUser._id}}
+        <a href="#" id="addsample" class="btn btn-primary">Add sample SMS</a>
+        <a href="/upload" class="btn btn-default">Upload voice message</a>
+        <a href="/confirmnuke" class="btn btn-warning">Reset (test only)</a><br />
+    {{/if}}
+    <input type="text" name="filter" placeholder="Filter by text" /><button>Apply</button>
+  </form>
+  <table class="table">
+    <caption></caption>
+    <thead><tr><th>#</th><th>Type</th><th>Text/transcript</th><th>Details</th></tr></thead>
+    <tbody>
+    {{#each content}}
+        <tr><td>{{this.contentId}}</td><td>{{this.type}}
+        <span class="{{showIfVoice this.format}}">(<a href="{{getFileUrl this.fileId}}">download</a>)</span>
+        </td><td>{{this.text}}</td><td>
+            Added on {{displaydate this.createdAt}}<br />
+            Topics: {{#each this.topics}}{{this}} {{/each}}
+        </td></tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="confirmnuke">
+    <div class="bg-danger container-fluid">
+        <div class="pull-right">
+            <a id="nuke" href="#" class="btn btn-danger">OK</a>
+            <a href="/" class="btn btn-default">Cancel</a>
+        </div>
+        <p>Are you sure you want to reset the data store? This can't be undone.
+        And yes, this is for testing purposes and wouldn't be in the final CMS.</p>
+    </div>
+</template>

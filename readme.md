@@ -11,6 +11,8 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   within the table."
 * `k5/` - blogging scripts used to power [kaulana.com][1] in its 5th version. Useful
   as a complete PHP app, or as the platform layer powering a blog's backend.
+* `meteor_cms/` - proof of concept for a voice & SMS content management system,
+  written in JavaScript using the [Meteor](http://meteor.com) framework.
 * `mfuof/` - e.g. Move Files Up One Folder. Applet intended to be placed in the
   Windows '[Send To][2]' folder as an accelerator.
 * `ray_tracer/` - basic ray tracer built for my undergrad computer graphics class.
