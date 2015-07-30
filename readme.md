@@ -24,9 +24,10 @@ Just a smattering of miscellanea that don't really warrant their own repos.
 
 ## License
 
-BSD for my code, as per the `license.md`. Dependencies have their own as noted.
+BSD for my code, as per [license.md][5]. Dependencies have their own as noted.
 
 [1]: http://kaulana.com/
 [2]: https://support.microsoft.com/en-us/kb/310270
 [3]: https://class.coursera.org/algo/class/index
 [4]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx
+[5]: https://github.com/skaulana/tidbits/blob/master/license.md
