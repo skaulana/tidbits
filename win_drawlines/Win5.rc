@@ -1,0 +1,87 @@
+#include "Win5.h"
+#include <windows.h>
+
+StaticMenu MENU
+{
+	POPUP "&File"
+	{
+		MENUITEM "E&xit",	IDM_EXIT
+	}
+	POPUP "&Pen"
+	{
+		POPUP "&Color"
+		{
+			MENUITEM "&Black",	IDM_PBLACK
+			MENUITEM "&Yellow",	IDM_PYELLOW
+			MENUITEM "&Red",	IDM_PRED
+			MENUITEM "&Green",	IDM_PGREEN
+			MENUITEM "&Blue",	IDM_PBLUE
+		}
+		POPUP "&Width"
+		{
+			MENUITEM "&1 px",	IDM_PW1
+			MENUITEM "&2 px",	IDM_PW2
+			MENUITEM "&3 px",	IDM_PW3
+			MENUITEM "&4 px",	IDM_PW4
+			MENUITEM "&5 px",	IDM_PW5
+		}
+		POPUP "&Style"
+		{
+			MENUITEM "&Solid",			IDM_PSOLID
+			MENUITEM "&Dash",			IDM_PDASH
+			MENUITEM "&Dot",			IDM_PDOT
+			MENUITEM "&Dash Dot",		IDM_PDASHDOT
+			MENUITEM "&Dash Dot Dot",	IDM_PDASHDOTDOT
+		}
+	}
+	POPUP "&Help"
+	{
+		MENUITEM "&About...",	IDM_ABOUT
+	}
+}
+
+PopMenu MENU
+{
+	POPUP ""
+	{
+		POPUP "&Background"
+		{
+			MENUITEM "&White",		IDM_BWHITE
+			MENUITEM "&Light Gray",	IDM_BLTGRAY
+			MENUITEM "&Gray",		IDM_BGRAY
+			MENUITEM "&Dark Gray",	IDM_BDKGRAY
+			MENUITEM "&Black",		IDM_BBLACK
+		}
+		POPUP "&Pen"
+		{
+			POPUP "&Color"
+			{
+				MENUITEM "&Black",	IDM_PBLACK
+				MENUITEM "&Yellow",	IDM_PYELLOW
+				MENUITEM "&Red",	IDM_PRED
+				MENUITEM "&Green",	IDM_PGREEN
+				MENUITEM "&Blue",	IDM_PBLUE
+			}
+			POPUP "&Width"
+			{
+				MENUITEM "&1 px",	IDM_PW1
+				MENUITEM "&2 px",	IDM_PW2
+				MENUITEM "&3 px",	IDM_PW3
+				MENUITEM "&4 px",	IDM_PW4
+				MENUITEM "&5 px",	IDM_PW5
+			}
+			POPUP "&Style"
+			{
+				MENUITEM "&Solid",			IDM_PSOLID
+				MENUITEM "&Dash",			IDM_PDASH
+				MENUITEM "&Dot",			IDM_PDOT
+				MENUITEM "&Dash Dot",		IDM_PDASHDOT
+				MENUITEM "&Dash Dot Dot",	IDM_PDASHDOTDOT
+			}
+		}
+		POPUP "&Help"
+		{
+			MENUITEM "&About...",	IDM_ABOUT
+		}
+	}
+}
