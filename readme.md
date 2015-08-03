@@ -20,9 +20,12 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   Draws lines on screen by handling low-level Win32 messages.
 * `algo4.cs` - solution to the strongly connected components (SCC) problem from
   the [Coursera](http://coursera.org) MOOC [Algorithms I][3].
+* `dateheaderline.c` - simple [Pidgin](http://pidgin.im/) plugin to add a date line
+  to new IM windows. Originally built for version 2.6.4; build the DLL and drop in
+  your _%APPDATA%\.purple\plugins_ directory for use.
 * `hexparse.php` - generates Verilog code to initialize a BlockRAM with hex data.
 * `tfs_feature_cards.html` - creates printable cards for [TFS][4] features using
-  a CSV export of a features query.
+  the CSV export of a features query.
 
 ## License
 
