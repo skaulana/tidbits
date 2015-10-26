@@ -35,4 +35,4 @@ BSD for my code, as per [license.md][5]. Dependencies have their own as noted.
 [2]: https://support.microsoft.com/en-us/kb/310270
 [3]: https://class.coursera.org/algo/class/index
 [4]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx
-[5]: https://github.com/skaulana/tidbits/blob/master/license.md
+[5]: /license.md
