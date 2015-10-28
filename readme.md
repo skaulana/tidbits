@@ -16,23 +16,28 @@ Just a smattering of miscellanea that don't really warrant their own repos.
 * `mfuof/` - e.g. Move Files Up One Folder. Applet intended to be placed in the
   Windows '[Send To][2]' folder as an accelerator.
 * `ray_tracer/` - basic ray tracer built for my undergrad computer graphics class.
+* `stylish_css/` - stylesheets submitted to [userstyles.org][3] for use with the
+  Stylish browser extension.
 * `win_drawlines/` - submission to an old C++ GUI programming class assignment.
   Draws lines on screen by handling low-level Win32 messages.
 * `algo4.cs` - solution to the strongly connected components (SCC) problem from
-  the [Coursera](http://coursera.org) MOOC [Algorithms I][3].
+  the [Coursera](http://coursera.org) MOOC [Algorithms I][4].
 * `dateheaderline.c` - simple [Pidgin](http://pidgin.im/) plugin to add a date line
   to new IM windows. Originally built for version 2.6.4; build the DLL and drop in
   your _%APPDATA%\.purple\plugins_ directory for use.
 * `hexparse.php` - generates Verilog code to initialize a BlockRAM with hex data.
-* `tfs_feature_cards.html` - creates printable cards for [TFS][4] features using
+* `tfs_feature_cards.html` - creates printable cards for [TFS][5] features using
   the CSV export of a features query.
 
 ## License
 
-BSD for my code, as per [license.md][5]. Dependencies have their own as noted.
+BSD for my code, as per [license.md][6]. Stylesheets for the Stylish project were
+submitted as [CC-BY][7]. Other dependencies are licensed as noted.
 
 [1]: http://kaulana.com/
 [2]: https://support.microsoft.com/en-us/kb/310270
-[3]: https://class.coursera.org/algo/class/index
-[4]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx
-[5]: /license.md
+[3]: https://userstyles.org/
+[4]: https://class.coursera.org/algo/class/index
+[5]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx
+[6]: /license.md
+[7]: http://creativecommons.org/licenses/by/4.0/

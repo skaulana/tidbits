@@ -1,0 +1,35 @@
+@-moz-document domain("mail.google.com") {
+/* Add a hover highlight for the active mail item */
+tr.aqw {
+    background: rgba(255,255,255,0.5);
+}
+/* Hide the 'Consider including' section */
+div.az7 {
+    display: none;
+}
+/* Move CC+BCC links up a bit to compensate for the above */
+div.ow {
+    position: absolute; bottom: 18px; right: 18px;
+}
+/* Hide inline ads */
+div.a2q {
+    display: none !important;
+}
+/* Hide the 'New Intro' button injected by the Conspire addon */
+div.intro-button {
+    display: none !important;
+}
+}
+
+@-moz-document domain("facebook.com") {
+/* LHS */
+#appsNav li { display: none; } /* removes detailed apps list */
+#interestsNav { display: none; } /* removes interests section */
+
+/* RHS */
+#pagelet_games_rhc { display: none; } /* removes recommended games */
+#pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
+
+/* Gallery view for photos */
+.ego_section { display: none; } /* removes people you may know */
+}
