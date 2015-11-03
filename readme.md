@@ -31,8 +31,9 @@ Just a smattering of miscellanea that don't really warrant their own repos.
 
 ## License
 
-BSD for my code, as per [license.md][6]. Stylesheets for the Stylish project were
-submitted as [CC-BY][7]. Other dependencies are licensed as noted.
+BSD for my code as per [license.md][6], except where superseded by the presence of
+a separate license document in the subfolder. Dependencies are licensed as noted
+in their subfolders as well.
 
 [1]: http://kaulana.com/
 [2]: https://support.microsoft.com/en-us/kb/310270
@@ -40,4 +41,3 @@ submitted as [CC-BY][7]. Other dependencies are licensed as noted.
 [4]: https://class.coursera.org/algo/class/index
 [5]: https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx
 [6]: /license.md
-[7]: http://creativecommons.org/licenses/by/4.0/

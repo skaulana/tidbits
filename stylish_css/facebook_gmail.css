@@ -11,11 +11,23 @@ div.az7 {
 div.ow {
     position: absolute; bottom: 18px; right: 18px;
 }
+/* Hide side ads section */
+div.nH.HbF0O, .Bu + .Bu {
+	display: none !important;
+}
 /* Hide inline ads */
 div.a2q {
     display: none !important;
 }
-/* Hide the 'New Intro' button injected by the Conspire addon */
+/* Hide bottom links for Terms and Privacy */
+div.l2 div.ma {
+	visibility: hidden !important;
+}
+/* Aligns the bottom link for Account Activity */
+div.l2 .ae3 .l6 {
+	position: relative; top: -12px;
+}
+/* If using the Conspire addon, this hides the 'New Intro' button */
 div.intro-button {
     display: none !important;
 }
