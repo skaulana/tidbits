@@ -38,14 +38,18 @@ div.aaq > img.mK {
 }
 
 @-moz-document domain("facebook.com") {
-/* LHS */
+/* LHS without hover flyouts */
 #appsNav li { display: none; } /* removes detailed apps list */
 #interestsNav { display: none; } /* removes interests section */
+
+/* LHS with hover flyouts */
+#js_1y { display: none !important; } /* removes interests link */
 
 /* RHS */
 #pagelet_games_rhc { display: none; } /* removes recommended games */
 #pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
-div.rhcFooterWrap a._41uf, a._41uf + span { display: none; } /* removes Ad Choices link */
+div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
+div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Terms and Cookies links - English only */
 
 /* Gallery view for photos */
 .ego_section { display: none; } /* removes people you may know */
