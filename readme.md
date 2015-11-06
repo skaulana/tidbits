@@ -9,6 +9,7 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   of locations with their latitudes and longitudes, write some PHP code that will
   calculate and display the distance from the arbitrary location to every location
   within the table."
+* `dwi/` - custom step files for [DWI](http://dwi.ddruk.com/), a DDR simulator.
 * `k5/` - blogging scripts used to power [kaulana.com][1] in its 5th version. Useful
   as a complete PHP app, or as the platform layer powering a blog's backend.
 * `meteor_cms/` - proof of concept for a voice & SMS content management system,
