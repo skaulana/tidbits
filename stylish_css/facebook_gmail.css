@@ -28,7 +28,7 @@ div.l2 .ae3 .l6 {
 	position: relative; top: -12px;
 }
 /* If using the Conspire addon, this hides the 'New Intro' button */
-div.intro-button {
+div.conspire-intro-button {
     display: none !important;
 }
 /* If also using littleleshy's Compact Hangouts stylesheet, this restores the Reply All icon */
