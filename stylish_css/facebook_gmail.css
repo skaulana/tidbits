@@ -27,10 +27,6 @@ div.l2 div.ma {
 div.l2 .ae3 .l6 {
 	position: relative; top: -12px;
 }
-/* If using the Conspire addon, this hides the 'New Intro' button */
-div.conspire-intro-button {
-    display: none !important;
-}
 /* If also using littleleshy's Compact Hangouts stylesheet, this restores the Reply All icon */
 div.aaq > img.mK {
     display: block !important; position: absolute; top: 5px; left: 10px;
@@ -43,11 +39,16 @@ div.aaq > img.mK {
 #interestsNav { display: none; } /* removes interests section */
 
 /* LHS with hover flyouts */
-#js_1y { display: none !important; } /* removes interests link */
+#sideNav a[title="Interests"] { display: none !important; } /* removes Interests link - English only */
+#sideNav li:nth-last-child(1), #sideNav li:nth-last-child(2) { display: none !important; } /* reduces number of extra groups shown by 2 */
+
+/* Main newsfeed */
+div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' box that gets inserted after you click a link */
 
 /* RHS */
 #pagelet_games_rhc { display: none; } /* removes recommended games */
 #pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
+#pagelet_trending_tags_and_topics { display: none; } /* removes trending topics */
 div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
 div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Terms and Cookies links - English only */
 
