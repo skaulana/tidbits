@@ -52,6 +52,10 @@ div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' bo
 div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
 div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Terms and Cookies links - English only */
 
+/* Own profile page */
+li.fbTimelineUnit div#profile_intro_card_bio { display: none; } /* removes nag to add bio text */
+li.fbTimelineUnit a[data-store*='fav_photos_add_click'] { display: none; } /* removes nag to add favorite photos */
+
 /* Gallery view for photos */
 .ego_section { display: none; } /* removes people you may know */
 }
