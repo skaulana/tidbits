@@ -34,13 +34,12 @@ div.aaq > img.mK {
 }
 
 @-moz-document domain("facebook.com") {
-/* LHS without hover flyouts */
+/* LHS */
+#pinnedNav h4 { display: none; } /* removes heading for favorites */
+#interestsNav, #eventsNav { display: none; } /* removes interests, events sections entirely */
 #appsNav li { display: none; } /* removes detailed apps list */
-#interestsNav { display: none; } /* removes interests section */
-
-/* LHS with hover flyouts */
-#sideNav a[title="Interests"] { display: none !important; } /* removes Interests link - English only */
-#sideNav li:nth-last-child(1), #sideNav li:nth-last-child(2) { display: none !important; } /* reduces number of extra groups shown by 2 */
+#developerNav li { display: none; } /* removes detailed developer actions list */
+#groupsNav li:nth-child(n+6) { display: none !important; } /* limits number of groups shown to 5 */
 
 /* Main newsfeed */
 div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' box that gets inserted after you click a link */
@@ -50,7 +49,7 @@ div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' bo
 #pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
 #pagelet_trending_tags_and_topics { display: none; } /* removes trending topics */
 div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
-div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Terms and Cookies links - English only */
+div.rhcFooterWrap a[title="Learn about your privacy and Facebook."], div.rhcFooterWrap a[title="Learn about your privacy and Facebook."] + span, div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Privacy, Terms, Cookies links - English only */
 
 /* Own profile page */
 li.fbTimelineUnit div#profile_intro_card_bio { display: none; } /* removes nag to add bio text */
