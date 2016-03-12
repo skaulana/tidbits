@@ -31,6 +31,10 @@ div.l2 .ae3 .l6 {
 div.aaq > img.mK {
     display: block !important; position: absolute; top: 5px; left: 10px;
 }
+/* If also using littleleshy's Compact Hangouts stylesheet, this restores the Reply All button alignment - English only */
+div.aaq[aria-label='Reply to all'] + div.aap {
+    position: relative; bottom: 11px;
+}
 }
 
 @-moz-document domain("facebook.com") {
