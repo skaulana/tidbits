@@ -53,6 +53,7 @@ div[data-ownerid^='u_jsonp_'] { display: none; } /* removes 'Suggested Videos' t
 #pagelet_games_rhc { display: none; } /* removes recommended games */
 #pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
 #pagelet_trending_tags_and_topics { display: none; } /* removes trending topics */
+div#rightCol .home_right_column { min-height: 0; } /* reduce empty space after removal of the above */
 div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
 div.rhcFooterWrap a[title="Learn about your privacy and Facebook."], div.rhcFooterWrap a[title="Learn about your privacy and Facebook."] + span, div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Privacy, Terms, Cookies links - English only */
 
