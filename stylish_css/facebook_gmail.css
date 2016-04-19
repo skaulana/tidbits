@@ -46,6 +46,7 @@ div.aaq[aria-label='Reply to all'] + div.aap {
 #groupsNav li:nth-child(n+6) { display: none !important; } /* limits number of groups shown to 5 */
 
 /* Main newsfeed */
+div.injectedSearchSuggestion { display: none; } /* removes search suggestions prompt from search box */
 div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' box that gets inserted after you click a link */
 div[data-ownerid^='u_jsonp_'] .mbm { display: none; } /* removes 'Suggested Videos' that get inserted after you watch one */
 
