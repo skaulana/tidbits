@@ -48,7 +48,7 @@ div.aaq[aria-label='Reply to all'] + div.aap {
 /* Main newsfeed */
 div.injectedSearchSuggestion { display: none; } /* removes search suggestions prompt from search box */
 div[data-ft='{"tn":"*="}'] { display: none; } /* removes 'People Also Shared' box that gets inserted after you click a link */
-div[data-referrer^='hyperfeed_story_id_'] div[data-ownerid^='u_jsonp_'] { display: none; } /* removes 'Suggested Videos' that get inserted after you watch one */
+div[data-referrer^='hyperfeed_story_id_'] div[data-ownerid*='_jsonp_'] { display: none; } /* removes 'Suggested Videos' that get inserted after you watch one */
 
 /* RHS */
 #pagelet_games_rhc { display: none; } /* removes recommended games */
