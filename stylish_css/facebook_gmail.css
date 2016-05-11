@@ -44,6 +44,7 @@ div.aaq[aria-label='Reply to all'] + div.aap {
 #appsNav li { display: none; } /* removes detailed apps list */
 #developerNav li { display: none; } /* removes detailed developer actions list */
 #groupsNav li:nth-child(n+6) { display: none !important; } /* limits number of groups shown to 5 */
+#listsNav li:nth-child(n+3) { display: none !important; } /* limits number of friends lists shown to 2 */
 
 /* Main newsfeed */
 div.injectedSearchSuggestion { display: none; } /* removes search suggestions prompt from search box */
