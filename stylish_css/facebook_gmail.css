@@ -39,12 +39,8 @@ div.aaq[aria-label='Reply to all'] + div.aap {
 
 @-moz-document domain("facebook.com") {
 /* LHS */
-#pinnedNav h4 { display: none; } /* removes heading for favorites */
-#interestsNav, #eventsNav { display: none; } /* removes interests, events sections entirely */
-#appsNav li { display: none; } /* removes detailed apps list */
-#developerNav li { display: none; } /* removes detailed developer actions list */
-#groupsNav li:nth-child(n+6) { display: none !important; } /* limits number of groups shown to 5 */
-#listsNav li:nth-child(n+3) { display: none !important; } /* limits number of friends lists shown to 2 */
+#appsNav h4 { display: none; } /* removes heading for explore */
+#appsNav li:nth-child(n+2) { display: none; } /* limits explore list to 1 */
 
 /* Main newsfeed */
 div.injectedSearchSuggestion { display: none; } /* removes search suggestions prompt from search box */
@@ -55,9 +51,8 @@ div[data-referrer^='hyperfeed_story_id_'] div[data-ownerid*='_jsonp_'] { display
 #pagelet_games_rhc { display: none; } /* removes recommended games */
 #pagelet_ego_pane { display: none; } /* removes suggested pages, people you may know, etc. */
 #pagelet_trending_tags_and_topics { display: none; } /* removes trending topics */
-div#rightCol .home_right_column { min-height: 0; } /* reduce empty space after removal of the above */
-div.rhcFooterWrap a._41uf, div.rhcFooterWrap a._41uf + span { display: none; } /* removes Ad Choices link */
-div.rhcFooterWrap a[title="Learn about your privacy and Facebook."], div.rhcFooterWrap a[title="Learn about your privacy and Facebook."] + span, div.rhcFooterWrap a[title="Review our terms and policies."], div.rhcFooterWrap a[title="Review our terms and policies."] + span, div.rhcFooterWrap a[title="Cookies"], div.rhcFooterWrap a[title="Cookies"] + span { display: none; } /* removes Privacy, Terms, Cookies links - English only */
+div#pagelet_rhc_footer a._41uf, div#pagelet_rhc_footer a._41uf + span { display: none; } /* removes Ad Choices link */
+div#pagelet_rhc_footer a[title="Learn about your privacy and Facebook."], div#pagelet_rhc_footer a[title="Learn about your privacy and Facebook."] + span, div#pagelet_rhc_footer a[title="Review our terms and policies."], div#pagelet_rhc_footer a[title="Review our terms and policies."] + span, div#pagelet_rhc_footer a[title="Cookies"], div#pagelet_rhc_footer a[title="Cookies"] + span { display: none; } /* removes Privacy, Terms, Cookies links - English only */
 
 /* Own profile page */
 li.fbTimelineUnit div#profile_intro_card_bio { display: none; } /* removes nag to add bio text */
