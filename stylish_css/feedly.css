@@ -12,7 +12,7 @@ div.metadata {
     overflow: visible !important;
 }
 /* Also, get rid of the bright orange upgrade button in the bottom left */
-div[data-uri='pro/navbar'] {
+button.pro {
     display: none;
 }
 }
