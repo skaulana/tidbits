@@ -27,6 +27,8 @@ Just a smattering of miscellanea that don't really warrant their own repos.
   to new IM windows. Originally built for version 2.6.4; build the DLL and drop in
   your _%APPDATA%\.purple\plugins_ directory for use.
 * `hexparse.php` - generates Verilog code to initialize a BlockRAM with hex data.
+* `pingnlog.sh` - simple shell script to periodically check a URL for uptime and
+  output the results to a flat file. Useful with crontab.
 * `tfs_feature_cards.html` - creates printable cards for [TFS][5] features using
   the CSV export of a features query.
 
